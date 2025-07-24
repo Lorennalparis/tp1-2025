@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora Funcional</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f4f8; /* fundo suave */
+      font-family: Arial, sans-serif;
+    }
+
+    .calculadora {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    input[type="text"] {
+      width: 240px;
+      height: 50px;
+      font-size: 28px;
+      text-align: right;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding-right: 10px;
+    }
+
+    button {
+      width: 60px;
+      height: 60px;
+      font-size: 22px;
+      margin: 4px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    /* Botões de números */
+    button[data-num] {
+      background-color: #e0e7ff;
+    }
+
+    /* Botões de operações */
+    button[data-op] {
+      background-color: #ffd580;
+    }
+
+    /* Botão de igual */
+    #igual {
+      background-color: #90ee90;
+    }
+
+    /* Botão de limpar */
+    #limpar {
+      background-color: #ff7f7f;
+      width: 256px;
+    }
+
+    /* Efeito ao passar o mouse */
+    button:hover {
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="calculadora">
+    <h2>Calculadora</h2>
+    <input type="text" id="display" value="0" disabled>
+    <br>
+
+    <button data-num="7">7</button>
+    <button data-num="8">8</button>
+    <button data-num="9">9</button>
+    <button data-op="/">/</button>
+    <br>
+
+    <button data-num="4">4</button>
+    <button data-num="5">5</button>
+    <button data-num="6">6</button>
+    <button data-op="*">*</button>
+    <br>
+
+    <button data-num="1">1</button>
+    <button data-num="2">2</button>
+    <button data-num="3">3</button>
+    <button data-op="-">-</button>
+    <br>
+
+    <button data-num="0">0</button>
+    <button data-num=".">.</button>
+    <button id="igual">=</button>
+    <button data-op="+">+</button>
+    <br><br>
+
+    <button id="limpar">C</button>
+  </div>
+
+  <script>
+    const display = document.getElementById("display");
+    let valorAtual = "";
+    let operador = "";
+    let resultadoAnterior = null;
+
+    document.querySelectorAll("button[data-num]").forEach(botao => {
+      botao.addEventListener("click", () => {
+        if (display.value === "0" || (resultadoAnterior !== null && operador === "")) {
+          display.value = "";
+        }
+        display.value += botao.dataset.num;
+        valorAtual = display.value;
+      });
+    });
+
+    document.querySelectorAll("button[data-op]").forEach(botao => {
+      botao.addEventListener("click", () => {
+        if (valorAtual === "" && resultadoAnterior === null) return;
+
+        if (resultadoAnterior === null) {
+          resultadoAnterior = parseFloat(valorAtual);
+        } else if (valorAtual !== "") {
+          calcular();
+        }
+
+        operador = botao.dataset.op;
+        display.value = "";
+        valorAtual = "";
+      });
+    });
+
+    document.getElementById("igual").addEventListener("click", () => {
+      if (valorAtual === "" || operador === "") return;
+      calcular();
+      operador = "";
+    });
+
+    function calcular() {
+      const numero = parseFloat(valorAtual);
+      if (isNaN(numero)) return;
+
+      switch (operador) {
+        case "+": resultadoAnterior += numero; break;
+        case "-": resultadoAnterior -= numero; break;
+        case "*": resultadoAnterior *= numero; break;
+        case "/": resultadoAnterior = numero === 0 ? "Erro" : resultadoAnterior / numero; break;
+      }
+
+      display.value = resultadoAnterior;
+      valorAtual = resultadoAnterior.toString();
+    }
+
+    document.getElementById("limpar").addEventListener("click", () => {
+      valorAtual = "";
+      operador = "";
+      resultadoAnterior = null;
+      display.value = "0";
+    });
+  </script>
+
+</body>
+</html>
