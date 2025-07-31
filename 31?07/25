@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Mostrar ou esconder listas</title>
+    <style>
+        .mostrar {
+            display: block;
+        }
+        .esconder {
+            display: none;  
+        }
+    </style>
+    <script>
+        
+        function mudaVisibilidade(elemento) {
+            const lista = document.getElementById(elemento);
+            if (lista.className === "mostrar") {
+                lista.className = "esconder";
+            } else {
+                lista.className = "mostrar";
+            }
+        }
+
+        
+        function alternaTudo() {
+            const listas = document.querySelectorAll("ul");
+            const todasAbertas = Array.from(listas).every(lista => lista.className === "mostrar");
+
+            listas.forEach(lista => {
+                lista.className = todasAbertas ? "esconder" : "mostrar";
+            });
+
+          
+            const botao = document.getElementById("botaoGeral");
+            botao.innerText = todasAbertas ? "Mostrar tudo" : "Esconder tudo";
+        }
+    </script>
+</head>
+<body>
+    <button id="botaoGeral" onclick="alternaTudo()">Esconder tudo</button>
+
+    <ol>
+        <li onclick="mudaVisibilidade('listaTeste1')">Teste1</li>
+        <ul id="listaTeste1" class="mostrar">
+            <li>bla</li>
+            <li>bla</li>
+            <li>bla</li>
+        </ul>
+
+        <li onclick="mudaVisibilidade('listaTeste2')">Teste2</li>
+        <ul id="listaTeste2" class="mostrar">
+            <li>ble</li>
+            <li>ble</li>
+            <li>ble</li>
+        </ul>
+    </ol>
+</body>
+</html>
