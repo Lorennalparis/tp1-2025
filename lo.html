@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorando o Mundo pelo computador</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fafafa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            height: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        header .logo img {
+            height: 40px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ff6f61;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                height: auto;
+                text-align: center;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            padding: 40px 20px;
+            flex-wrap: wrap;
+        }
+
+        .destination {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 350px;
+            margin: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .destination h2 {
+            color: #444;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .destination ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin-bottom: 20px;
+        }
+
+        .destination ul li {
+            font-size: 16px;
+            margin: 8px 0;
+            color: #555;
+        }
+
+        .destination-image {
+            width: 100%;
+            border-radius: 8px;
+            margin-top: 20px;
+            height: auto;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        .destination:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+            transform: scale(1.05);
+            transition: all 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="" alt="">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="http://127.0.0.1:3000/views/lo2.html">Paris</a></li>
+                <li><a href="http://127.0.0.1:3000/views/lo3.html">Tóquio</a></li>
+                <li><a href="http://127.0.0.1:3000/views/lo6.html">Nova York</a></li>
+                <li><a href="http://127.0.0.1:3000/views/lo4.html">Roma</a></li>
+                <li><a href="http://127.0.0.1:3000/views/lo5.html">Canadá</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <main class="content">
+        <section id="paris" class="destination">
+            <h2>Paris, França</h2>
+            <ul>
+                <li>Visite a Torre Eiffel</li>
+                <li>Conheça o Museu do Louvre</li>
+                <li>Desfrute dos cafés parisienses</li>
+            </ul>
+            <img src="https://oficinadeinverno.com.br/cdn/shop/articles/eiffel-tower-sunrise1.jpg?v=1659494576" alt="Paris" class="destination-image">
+        </section>
+        <section id="Canadá" class="destination">
+            <h2>Canadá, Toronto</h2>
+            <ul>
+                <li>Visite as Cataratas do Niágara</li>
+                <li> Explore o Parque Nacional de Banff</li>
+                <li>Prove do Poutine</li>
+            </ul>
+            <img src="https://lionsintercambio.com.br/wp-content/uploads/elementor/thumbs/Fotos-Blog-Lions-quzkdrrnbtbgtcyeho3gvz1p1r1etpdtnrn89zr56o.png" alt="Canadá" class="destination-image">
+        </section>
+        <section id="tokyo" class="destination">
+            <h2>Tóquio, Japão</h2>
+            <ul>
+                <li>Explore o Mercado de Tsukiji</li>
+                <li>Visite o Templo Senso-ji</li>
+                <li>Experimente a comida local</li>
+            </ul>
+            <img src="https://viagemeturismo.abril.com.br/wp-content/uploads/2016/12/8734439139_c9449a4df2_o1.jpeg" alt="Tóquio" class="destination-image">
+        </section>
+        <section id="nyc" class="destination">
+            <h2>Nova York, EUA</h2>
+            <ul>
+                <li>Visite a Estátua da Liberdade</li>
+                <li>Conheça Times Square</li>
+                <li>Explore o Central Park</li>
+            </ul>
+            <img src="https://www.remessaonline.com.br/blog/wp-content/uploads/2022/06/morar-em-nova-york.jpg" alt="Nova York" class="destination-image">
+        </section>
+        <section id="rome" class="destination">
+            <h2>Roma, Itália</h2>
+            <ul>
+                <li>Explore o Coliseu</li>
+                <li>Visite o Vaticano</li>
+                <li>Prove a autêntica pizza italiana</li>
+            </ul>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfeCxygm-CNPnkiPq6tL8iYNvBt4h67Vo9Ig&s" alt="Roma" class="destination-image">
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Explorando o Mundo. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
