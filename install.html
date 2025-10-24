@@ -1,0 +1,45 @@
+const express = require('express');
+const app = express();
+const port = 3000;
+
+
+app.get('/', (req, res) => {
+  res.send('Servidor de Operações Matemáticas!');
+});
+
+
+app.get('/soma/:n1/:n2', (req, res) => {
+  const n1 = parseFloat(req.params.n1);
+  const n2 = parseFloat(req.params.n2);
+  res.send(`Resultado da soma: ${n1 + n2}`);
+});
+
+// Rota de subtração
+app.get('/subtracao/:n1/:n2', (req, res) => {
+  const n1 = parseFloat(req.params.n1);
+  const n2 = parseFloat(req.params.n2);
+  res.send(`Resultado da subtração: ${n1 - n2}`);
+});
+
+
+app.get('/multiplicacao/:n1/:n2', (req, res) => {
+  const n1 = parseFloat(req.params.n1);
+  const n2 = parseFloat(req.params.n2);
+  res.send(`Resultado da multiplicação: ${n1 * n2}`);
+});
+
+
+app.get('/divisao/:n1/:n2', (req, res) => {
+  const n1 = parseFloat(req.params.n1);
+  const n2 = parseFloat(req.params.n2);
+
+  if (n2 === 0) {
+    res.send('Erro: não é possível dividir por zero');
+  } else {
+    res.send(`Resultado da divisão: ${n1 / n2}`);
+  }
+});
+
+app.listen(port, () => {
+  console.log(`Servidor rodando em http://localhost:${port}`);
+});
