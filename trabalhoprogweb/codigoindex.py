@@ -19,11 +19,11 @@
 
     <div class="collapse navbar-collapse" id="menu">ss
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link active" href="file:///home/aluno/L'orennalparis/tp1-2025-main%20(2)/index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="file:///home/aluno/L'orennalparis/tp1-2025-main%20(2)/contato.html">Contato</a></li>
-        <li class="nav-item"><a class="nav-link" href="file:///home/aluno/L'orennalparis/tp1-2025-main%20(2)/detalhes.html">Detalhes</a></li>
-        <li class="nav-item"><a class="nav-link" href="file:///home/aluno/L'orennalparis/tp1-2025-main%20(2)/produto.html">Produtos</a></li>
-        <li class="nav-item"><a class="nav-link" href="file:///home/aluno/L'orennalparis/tp1-2025-main%20(2)/fotos.html">Fotos</a></li>
+        <li class="nav-item"><a class="nav-link active" href="file:///home/aluno/L'orennalparis/tp1-2025-main%20(2)/prog.web/index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="file:///home/aluno/L'orennalparis/tp1-2025-main%20(2)/prog.web/contato.html">Contato</a></li>
+        <li class="nav-item"><a class="nav-link" href="file:///home/aluno/L'orennalparis/tp1-2025-main%20(2)/prog.web/detalhes.html">Detalhes</a></li>
+        <li class="nav-item"><a class="nav-link" href="file:///home/aluno/L'orennalparis/tp1-2025-main%20(2)/prog.web/produto.html">Produtos</a></li>
+        <li class="nav-item"><a class="nav-link" href="file:///home/aluno/L'orennalparis/tp1-2025-main%20(2)/prog.web/fotos.html">Fotos</a></li>
       </ul>
     </div>
   </div>
@@ -34,7 +34,7 @@
   <div class="container">
     <h1>Bem-vindo ao Nosso Site</h1>
     <p class="lead">Projeto desenvolvido com Bootstrap 5</p>
-    <a href="file:///home/aluno/L'orennalparis/tp1-2025-main%20(2)/produto.html" class="btn btn-light btn-lg">Ver Produtos</a>
+    <a href="file:///home/aluno/L'orennalparis/tp1-2025-main%20(2)/prog.web/produto.html" class="btn btn-light btn-lg">Ver Produtos</a>
   </div>
 </section>
 
