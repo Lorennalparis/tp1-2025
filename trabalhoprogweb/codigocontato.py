@@ -10,8 +10,8 @@
 
 <nav class="navbar navbar-dark bg-dark">
   <div class="container">
-    <a class="navbar-brand" href="file:///home/aluno/L'orennalparis/tp1-2025-main%20(2)/index.html">Girlsnamaquiagem</a>
-    <a href="file:///home/aluno/L'orennalparis/tp1-2025-main%20(2)/index.html">← Voltar para página inicial</a>
+    <a class="navbar-brand" href="file:///home/aluno/L'orennalparis/tp1-2025-main%20(2)/prog.web/index.html">Girlsnamaquiagem</a>
+    <a href="file:///home/aluno/L'orennalparis/tp1-2025-main%20(2)/prog.web/index.html">← Voltar para página inicial</a>
   </div>
 </nav>
 
