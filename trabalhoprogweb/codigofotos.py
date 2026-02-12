@@ -10,15 +10,15 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
-    <a class="navbar-brand" href="file:///home/aluno/L'orennalparis/tp1-2025-main%20(2)/index.html">Girlsnamaquiagem</a>
-    <a href="file:///home/aluno/L'orennalparis/tp1-2025-main%20(2)/index.html">← Voltar para página inicial</a>
+    <a class="navbar-brand" href="file:///home/aluno/L'orennalparis/tp1-2025-main%20(2)/prog.web/index.html">Girlsnamaquiagem</a>
+    <a href="file:///home/aluno/L'orennalparis/tp1-2025-main%20(2)/prog.web/index.html">← Voltar para página inicial</a>
     <div class="dropdown">
       <button class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown">
         Menu
       </button>
       <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="file:///home/aluno/L'orennalparis/tp1-2025-main%20(2)/produto.html">Produtos</a></li>
-        <li><a class="dropdown-item" href="file:///home/aluno/L'orennalparis/tp1-2025-main%20(2)/contato.html">Contato</a></li>
+        <li><a class="dropdown-item" href="file:///home/aluno/L'orennalparis/tp1-2025-main%20(2)/prog.web/produto.html">Produtos</a></li>
+        <li><a class="dropdown-item" href="file:///home/aluno/L'orennalparis/tp1-2025-main%20(2)/prog.web/contato.html">Contato</a></li>
       </ul>
     </div>
   </div>
