@@ -1,0 +1,13 @@
+<h1>Mensagens recebidas</h1>
+
+<% lista.forEach(function(msg){ %>
+
+<div>
+  <p><strong>Nome:</strong> <%= msg.nome %></p>
+  <p><strong>Email:</strong> <%= msg.email %></p>
+  <p><strong>Mensagem:</strong> <%= msg.mensagem %></p>
+</div>
+
+<hr>
+
+<% }) %>
