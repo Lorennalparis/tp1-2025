@@ -1,13 +1,26 @@
-<h1>Mensagens recebidas</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Respostas</title>
+</head>
 
-<% lista.forEach(function(msg){ %>
+<body>
+
+<h1>Respostas enviadas</h1>
+
+<% dados.forEach(function(item){ %>
 
 <div>
-  <p><strong>Nome:</strong> <%= msg.nome %></p>
-  <p><strong>Email:</strong> <%= msg.email %></p>
-  <p><strong>Mensagem:</strong> <%= msg.mensagem %></p>
-</div>
+
+<p><strong>Nome:</strong> <%= item.nome %></p>
+<p><strong>Email:</strong> <%= item.email %></p>
+<p><strong>Mensagem:</strong> <%= item.mensagem %></p>
 
 <hr>
 
+</div>
+
 <% }) %>
+
+</body>
+</html>
